@@ -11,14 +11,317 @@
             margin: auto;
             font-size: 25px;
         }
+        #parent{
+            height : 350px;
+            width: 80%;
+            /* border: 1px solid blueviolet; */
+            margin: auto;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+           
+
+
+        }
+        .overlay{
+            width: 150px;
+            height: 140px;
+            position: absolute;
+            /* border: 1px solid black; */
+            margin-left: 360px;
+            margin-top: 35px;
+            background-color: rgb(80,142,185);
+            box-shadow: rgb(44,62,80) 0px 0px 15px 0px inset ;
+        }
+        #parent p{
+             color: white;
+             padding-left: 15px;
+        }
+        .row{
+          width: 100%;
+         height: 20%;
+           display: flex;
+          flex-direction: row;
+
+        }
+        .box{
+            width: 4.7%;
+            height: 90%;
+            margin-left: 5px;
+            margin-right: auto;
+
+        }
+        .maroon{
+            background-color: rgb(254,0,0,0.813);
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,rgba(0, 0, 0, 0.5) 0px 7px 13px 2px,
+        }
+        .yellow{
+            background-color: yellow;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,rgba(0, 0, 0, 0.5) 0px 7px 13px 2px,
+        }
+        .lgreen{
+            background-color: rgb(80,142,85);
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,rgba(0, 0, 0, 0.5) 0px 7px 13px 2px,
+        }
+        .pink{
+            background-color: rgb(227,138,56,0.968);
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,rgba(0, 0, 0, 0.5) 0px 7px 13px 2px,
+        }
+        .lpink{
+            background-color:black;
+            box-shadow: rgba(6, 4, 4, 0.4) 0px 2px 4px,
+            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,rgba(0, 0, 0, 0.5) 0px 7px 13px 2px,
+        }
+        .blue{
+            background-color: blue;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,rgba(0, 0, 0, 0.5) 0px 7px 13px 2px,
+        }
+        .brown{
+            background-color:rgba(73,21,21,0.422);
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,rgba(0, 0, 0, 0.5) 0px 7px 13px 2px,
+        }
+        .dpink{
+            background-color:rgba(255,86,143);
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,rgba(0, 0, 0, 0.5) 0px 7px 13px 2px,
+        }
+        .green{
+            background-color:rgba(14,252,14);
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,rgba(0, 0, 0, 0.5) 0px 7px 13px 2px,
+        }
+        .purple{
+            background-color:purple;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,rgba(0, 0, 0, 0.5) 0px 7px 13px 2px,
+        }
+        .orange{
+            background-color:orangered;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+            rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,rgba(0, 0, 0, 0.5) 0px 7px 13px 2px,
+        }
+        #parent2{
+            width: 50%;
+            height: 100px;
+            margin: auto;
+            margin-top: 70px;border: 1px solid red;
+            box-shadow: rgb(44,62,80) 0px -15px 15px -15px,rgb(44,62,80) 0px 15px 15px -15px;
+        }
+        .child{
+            width: 100%;
+            height: 50%;
+            display: flex;
+        }
+        .box2{
+            width: 8.5%;
+            height: 100%;
+            margin: auto;
+            color: white;
+            box-shadow: rgba(6,24,44,0.4) 0px 0px 0px 2px,rgba(6,24,44,0.65) 0px 4px 6px -1px;
+        }
+        div .one .box2{
+            background-color: rgb(113,133,82);
+        }
+        div .two .box2{
+            background-color: rgb(36,211,153);
+        }
+
     </style>
 </head>
 <body>
     <p class="heading">THE PERIODIC TABLE OF ELEMENTS</p>
-    <div>
-        <div>
+    <div class="overlay">
+        <p style="padding-left: 130px;color: white;">14</p>
+      <h1 style="padding-left: 30px;color: white;font-size: 35px;">Si</h1>
+      <p style="padding-left: 10px;color: white;">Silicon</p>
+    </div>
 
+      <div id="parent">
+        <div class="row one">
+            <div class="box maroon"><p>H</p></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box yellow"></div>
         </div>
+        <div class="row two">
+            <div class="box lgreen"></div>
+            <div class="box pink"><p>4</p></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box purple"></div>
+            <div class="box green"></div>
+            <div class="box green "></div>
+            <div class="box green"></div>
+            <div class="box dpink"></div>
+            <div class="box yellow"></div>
+        </div>
+        <div class="row three">
+            <div class="box lgreen"></div>
+            <div class="box pink"><p>12</p></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box orange"></div>
+            <div class="box purple"></div>
+            <div class="box green "></div>
+            <div class="box green"></div>
+            <div class="box dpink"></div>
+            <div class="box yellow"></div>
+        </div>
+        <div class="row four">
+            <div class="box lgreen"></div>
+            <div class="box pink"><p>20</p></div>
+            <div class="box"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box orange"></div>
+            <div class="box purple"></div>
+            <div class="box purple"></div>
+            <div class="box green"></div>
+            <div class="box dpink"></div>
+            <div class="box yellow"></div>
+        </div>
+        <div class="row five">
+            <div class="box lgreen"></div>
+            <div class="box pink"><p>38</p></div>
+            <div class="box"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box orange"></div>
+            <div class="box orange "></div>
+            <div class="box purple"></div>
+            <div class="box purple"></div>
+            <div class="box dpink"></div>
+            <div class="box yellow"></div>
+        </div>
+        <div class="row six">
+            <div class="box lgreen"></div>
+            <div class="box pink"><p>56</p></div>
+            <div class="box lpink"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box orange"></div>
+            <div class="box orange "></div>
+            <div class="box orange"></div>
+            <div class="box purple"></div>
+            <div class="box dpink"></div>
+            <div class="box yellow"></div>
+        </div>
+        <div class="row seven">
+            <div class="box lgreen"></div>
+            <div class="box pink"><p>88</p></div>
+            <div class="box lpink"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box blue"></div>
+            <div class="box brown"></div>
+            <div class="box brown "></div>
+            <div class="box brown"></div>
+            <div class="box brown"></div>
+            <div class="box brown"></div>
+            <div class="box brown"></div>
+        </div>
+    </div>
+
+    <div id="parent2">
+     <div class="child one">
+        <div class="box2"><p style="text-align: center;">La</p></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        <div class="box2"></div>
+        </div>
+        <div class="child two">
+           <div class="box2"></div>
+           <div class="box2"></div>
+           <div class="box2"></div>
+           <div class="box2"></div>
+           <div class="box2"></div>
+           <div class="box2"></div>
+           <div class="box2"><p style="text-align: center;">Am</p></div>
+           <div class="box2"></div>
+           <div class="box2"></div>
+           <div class="box2"></div>
+           <div class="box2"></div>
+           <div class="box2"></div>
+           <div class="box2"></div>
+           <div class="box2"><p style="text-align: center;">Na</p></div>
+         </div>
     </div>
 </body>
 </html>
