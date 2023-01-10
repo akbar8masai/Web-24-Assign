@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WE SESSIONS</title>
+   <style>
+     #container{
+        display: flex;
+        background-color: rgb(69, 69, 133);
+        height: 70px;
+        justify-content: space-between;
+        width: 100%;
+          
+    }
+    #container > div{
+      color: aliceblue;
+      display: flex;
+     width: 30%;
+     justify-content: space-around;
+     align-items: center;
+    }
+    div > img{
+       width: 15%;
+       margin-right: 900px;
+    }
+     h1{
+      text-align: center;
+      color: red;
+    }
+   #container + div {
+       width: 80%;
+       margin: auto;
+       
+       flex-wrap: wrap;
+       justify-content: space-between;
+       display: grid;
+       grid-template-columns: repeat(3,1fr);
+       grid-template-rows: repeat(2,200px);
+
+   }
+   #container + div > img{
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+   }
+ 
+   </style>
+</head>
+<body>
+    <div id="container">
+     <img src="https://www.masaischool.com/img/navbar/logo.svg" alt="Error">
+     <div>
+      <p>Home</p>
+      <p>Gallery</p>
+      <p>About</p>
+     </div>
+
+    </div>
+     <div>
+      <img src="https://cdn.pixabay.com/photo/2020/01/29/14/16/nature-4802622_960_720.jpg" alt="Error">
+      <img src="https://cdn.pixabay.com/photo/2020/01/29/14/16/nature-4802622_960_720.jpg" alt="Error">
+      <img src="https://cdn.pixabay.com/photo/2020/01/29/14/16/nature-4802622_960_720.jpg" alt="Error">
+      <img src="https://cdn.pixabay.com/photo/2020/01/29/14/16/nature-4802622_960_720.jpg" alt="Error">
+      <img src="https://cdn.pixabay.com/photo/2020/01/29/14/16/nature-4802622_960_720.jpg" alt="Error">
+      <img src="https://cdn.pixabay.com/photo/2020/01/29/14/16/nature-4802622_960_720.jpg" alt="Error">
+     </div>
+    
+
+</body>
+</html>

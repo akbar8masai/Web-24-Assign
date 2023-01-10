@@ -1,0 +1,96 @@
+ body{
+
+   }
+  
+   .header{
+    width: 40%;
+    margin: auto;
+    text-align: center;
+   }
+   #container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+
+   }
+   #container > div {
+       text-align: center;
+       padding: 0px 10px 20px 10px;
+       line-height: 15px;
+       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   }
+   #container > div >img {
+       width: 100%;
+   }
+
+   p+div{
+    margin-top: 30px;
+   display: flex;
+   justify-content: space-between;
+    border-radius: 30px;
+   }
+   .bottom{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,200px);
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+   }
+   .bottom > div {
+    padding-top: 50px;
+    text-align: center;
+    margin: auto;
+   }
+   button{
+    border-radius: 20px;
+   }
+   button:hover{
+    border-radius: 20px;
+    cursor: pointer;
+   }
+   
+ /* medium screen */
+   @media all and (min-width:451px) and (max-width:750px) {
+    .header{
+        width: 90%;
+       
+       }
+       #container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        width: 90%;
+       }
+       .bottom{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        width: 90%;
+        
+       }
+    }
+ /* small screen */
+ @media all and (min-width:100px) and (max-width:450px) {
+    .header{
+        width: 100%;
+       
+       }
+       #container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        width: 100%;
+    
+       }
+       .bottom{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        width: 100%;
+        
+       }
+  }

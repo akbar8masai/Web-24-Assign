@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini calci</title>
+    <style>
+        .container{
+            display: flex;
+            padding: 20px;
+            margin: auto;
+        }
+        .container > div{
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input id="number1" type="number" placeholder="enter 1st number">
+    <input id="number2" type="number" placeholder="enter 2nd number">
+    <div class="container">
+    
+            <div>   <button onclick="addition()">Add</button></div>
+            <div>  <button onclick="subtraction()">Subtract</button></div>
+            <div> <button onclick="multiplication()">Multiply</button></div>
+            <div>   <button onclick="division()">Divide</button></div>
+ </div>
+</body>
+</html>
+<script>
+     function addition(){
+       let x= document.getElementById("number1").value
+       let y= document.getElementById("number2").value
+       let z=parseInt(x)+parseInt(y)
+        alert(z)
+     }
+     function subtraction(){
+       let x= document.getElementById("number1").value
+       let y= document.getElementById("number2").value
+       let z=parseInt(x)-parseInt(y)
+        alert(z)
+     }
+     function multiplication(){
+       let x= document.getElementById("number1").value
+       let y= document.getElementById("number2").value
+       let z=parseInt(x)* parseInt(y)
+        alert(z)
+     }
+     function division(){
+       let x= document.getElementById("number1").value
+       let y= document.getElementById("number2").value
+       let z=parseInt(x)/parseInt(y)
+        alert(z)
+     }
+</script>

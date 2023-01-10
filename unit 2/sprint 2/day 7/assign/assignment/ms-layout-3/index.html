@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout-2</title>
+    <style>
+      .nav{
+        background-color: yellow;
+        padding: 20px;
+        font-size: 20px;
+        font-weight: bolder;
+        width: 90%;
+        margin:autow;
+      }
+      .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+       
+        gap: 20px;
+        width: 80%;
+        margin: auto;
+       padding: 20px;
+      }
+      .container >div{
+        width: 400px;
+        height: 400px;
+        font-size: 40px;
+        color: grey;
+        width: 70%;
+       
+      }
+      #right{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(3,150px);
+        gap: 20px;
+        width: 90%;
+      }
+      #right > div{
+        padding: 20px;
+        width: 300px;
+        height: 108px;
+       
+     
+        
+      }
+      .container >div:nth-child(1){
+        background-color: red;
+        grid-area: "rd";
+      }
+      #right >div:nth-child(1){
+        background-color:green;
+        grid-area: "grn 1";
+        margin-bottom: 20px;
+      }
+      #right  >div:nth-child(2){
+        background-color:green;
+        grid-area: "grn 2";
+      }
+      #right  >div:nth-child(3){
+        background-color:green;
+        grid-area: "grn 3";
+      }
+
+      @media all and (min-width:320px) and (max-width:550px){
+        .container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        width: 100%;
+       
+       }
+       #right{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(1,150px);
+        width: 100%;
+      }
+      }
+      @media all and (min-width:551px) and (max-width:750px){
+        .container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        width: 90%;
+       }
+       #right{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(1,150px);
+        width: 90%;
+      }
+      }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <p>Navigation</p>
+    </div>
+    <div class="container">
+     <div>
+        <div>Left box</div>
+    </div>
+    <div id="right">
+        <div>Right box 1</div>
+        <div>Right box 2</div>
+        <div>Right box 3</div>
+    </div>
+    </div>
+</body>
+</html>

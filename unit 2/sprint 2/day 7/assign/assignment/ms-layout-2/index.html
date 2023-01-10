@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout-2</title>
+    <style>
+      .nav{
+        background-color: yellow;
+        padding: 10px;
+        font-size: 20px;
+        font-weight: bolder;
+        width: 80%;
+        margin: auto;
+      }
+      .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: auto;
+        gap: 20px;
+        width: 80%;
+        margin: auto;
+        padding: 20px 0px 20px 0px
+      }
+      .container >div{
+        width: 400px;
+        height: 400px;
+        font-size: 40px;
+        color: grey;
+       
+      }
+      .container >div:nth-child(1){
+        background-color: red;
+      }
+      .container >div:nth-child(2){
+        background-color:green;
+      }
+
+      @media all and (min-width:320px) and (max-width:550px){
+        .container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: auto;
+        width: 90%;
+      
+      }
+      }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <p>Navigation</p>
+    </div>
+    <div class="container">
+        <div>Left box</div>
+        <div>Right box</div>
+    </div>
+</body>
+</html>
