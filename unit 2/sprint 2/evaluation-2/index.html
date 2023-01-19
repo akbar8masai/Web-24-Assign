@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluation-2</title>
+    <style>
+        #container{
+            display:grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(1,400px);
+            width: 90%;
+            margin: auto;
+        }
+        #container>div{
+           width: 90%
+        }
+        #container>div > img {
+            width: 100%;
+        }
+        #card{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+           grid-template-rows: repeat(2,200px);
+           gap: 10px;
+           margin: auto;
+           width: 90%;
+        }
+        #card > div{
+            width: 90%;
+            background-color: aqua;
+            margin: 10px 10px 10px 10px;
+
+        }
+        #card > div > img {
+            width: 20%;
+        }
+        h1{
+            text-align: center;
+            
+        }
+        p{
+            text-align: center
+        }
+        #bottom{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(1,100px);
+            gap: 10px;
+            margin: auto;
+            width: 90%;
+        }
+        #bottom>div{
+            width: 90%;
+        }
+        #bottom>div>img{
+            width: 100%;
+            
+        }
+        
+         /* medium screen */
+        @media all and (min-width:451px) and (max-width:750px) {
+            #container{
+            display:grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(1,400px);
+            width: 90%;
+        }
+           #card{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+           grid-template-rows: repeat(4,200px);
+           width: 90%;
+        }
+        #bottom{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,400px);
+            width: 90%;
+        }
+        }
+       /* small screen */
+        @media all and (min-width:100px) and (max-width:450px) {
+            #container{
+           display: flex;
+            width: 100%;
+           
+           }
+           #card{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+           grid-template-rows: auto;
+           width: 100%;
+        }
+        #bottom{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(4,500px);
+            width: 90%;
+        }
+        }
+
+            </style>
+</head>
+<body>
+    <div id="container">
+        <div>
+            <h1>Sobre a Plataforma de Gestao MarketUP</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis neque ducimus hic nemo iusto nihil praesentium, eos pariatur ad assumenda nostrum libero est aliquid, quo labore dolore minima obcaecati illum?
+            Sequi excepturi unde illum? Consectetur commodi odio cum. Blanditiis commodi quia dolor, aliquam autem, ratione id aspernatur hic illum numquam ipsam ab deleniti cum minus et est eligendi provident aperiam.
+            Ut, alias totam ratione velit eius officiis quidem fugiat, minus voluptas rem commodi deleniti excepturi dicta necessitatibus? Asperiores neque, at eos dignissimos inventore porro dolorum, iusto reiciendis nesciunt tempora dolore?</p>
+        </div>
+        <div>
+            <img src="https://marketup.com/wp-content/uploads/2022/06/Home-Mock.png" alt="Error">
+        </div>
+    </div>
+    <h1>Recursos Relacionados</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit mollitia sint voluptatibus consequatur asperiores vel quisquam. Nulla saepe tenetur cumque dolorem consectetur deleniti atque eius fuga! Deserunt animi fugiat dolore!</p>
+    <div id="card">
+        <div>
+            <img src="https://openclipart.org/image/2400px/svg_to_png/276483/1490609861.png" alt="Error">
+            <h1>Para suas vendas</h1>
+            <p>frente de caixa(PDV) loja virtual pelidos</p>
+        </div>
+        <div>
+            <img src="https://openclipart.org/image/2400px/svg_to_png/276483/1490609861.png" alt="Error">
+            <h1>Para suas vendas</h1>
+            <p>frente de caixa(PDV) loja virtual pelidos</p>
+        </div>
+        <div>
+            <img src="https://openclipart.org/image/2400px/svg_to_png/276483/1490609861.png" alt="Error">
+            <h1>Para suas vendas</h1>
+            <p>frente de caixa(PDV) loja virtual pelidos</p>
+        </div>
+        <div> <img src="https://openclipart.org/image/2400px/svg_to_png/276483/1490609861.png" alt="Error">
+            <h1>Para suas vendas</h1>
+            <p>frente de caixa(PDV) loja virtual pelidos</p></div>
+        <div> <img src="https://openclipart.org/image/2400px/svg_to_png/276483/1490609861.png" alt="Error">
+            <h1>Para suas vendas</h1>
+            <p>frente de caixa(PDV) loja virtual pelidos</p></div>
+        <div> <img src="https://openclipart.org/image/2400px/svg_to_png/276483/1490609861.png" alt="Error">
+            <h1>Para suas vendas</h1>
+            <p>frente de caixa(PDV) loja virtual pelidos</p></div>
+        <div> <img src="https://openclipart.org/image/2400px/svg_to_png/276483/1490609861.png" alt="Error">
+            <h1>Para suas vendas</h1>
+            <p>frente de caixa(PDV) loja virtual pelidos</p></div>
+        <div> <img src="https://openclipart.org/image/2400px/svg_to_png/276483/1490609861.png" alt="Error">
+            <h1>Para suas vendas</h1>
+            <p>frente de caixa(PDV) loja virtual pelidos</p></div>
+    </div>
+      <h1>Conheca nossos segmantos</h1>
+      <p>Lorem ipsum dolor ae fugiatrferendis amet. Aperiam neque omnis voluptatem. Voluptatum cumque dolores eaque velit?</p>
+    <div id="bottom">
+    <div>
+        <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-09-08/Screenshot%202022-09-06%20at%2012.13.44%20PM_859545.png" alt="Error">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <button>SAIBA MAIS</button>
+    </div>  
+    <div> <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-09-08/Screenshot%202022-09-06%20at%2012.13.44%20PM_859545.png" alt="Error">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <button>SAIBA MAIS</button></div>
+    <div> <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-09-08/Screenshot%202022-09-06%20at%2012.13.44%20PM_859545.png" alt="Error">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <button>SAIBA MAIS</button></div>
+    <div> <img src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-09-08/Screenshot%202022-09-06%20at%2012.13.44%20PM_859545.png" alt="Error">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <button>SAIBA MAIS</button></div>   
+    </div>
+</body>
+
+</html

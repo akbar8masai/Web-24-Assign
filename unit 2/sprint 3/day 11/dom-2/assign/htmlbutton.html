@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+      .card>div:nth-child(1){
+        background-color: rgb(71, 133, 133);
+        color: aliceblue;
+      }
+      .card>div:nth-child(2){
+        background-color: rgb(36, 71, 165);
+        color: aliceblue;
+      }
+      .card>div:nth-child(3){
+        background-color: rgb(36, 165, 49);
+        color: aliceblue;
+      }
+      .card>div:nth-child(4){
+        background-color: rgb(223, 30, 59);
+        color: aliceblue;
+      }
+      .card>div:nth-child(5){
+        background-color: rgb(223, 201, 30);
+        color: aliceblue;
+      }
+      .card>div:nth-child(6){
+        background-color: rgb(18, 53, 157);
+        color: aliceblue;
+      }
+      .card>div:nth-child(7){
+        background-color: rgb(241, 247, 248);
+        color: rgb(29, 66, 98);
+      }
+      .card>div:nth-child(8){
+        background-color: rgb(30, 28, 28);
+        color: aliceblue;
+      }
+      .card>div:nth-child(9){
+        background-color: rgb(251, 244, 245);
+        color: rgb(24, 96, 159);
+      }
+      .card>div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+
+      }
+      .card{
+        display: grid;
+        grid-template-columns: repeat(9,1fr);
+        grid-template-rows: repeat(1,30px);
+        gap: 10px;
+        
+      }
+    </style>
+  
+</head>
+<body>
+    <div class="card">
+   <div>Primary</div>
+   <div>Secondary</div>
+   <div>Success</div>
+   <div>Danger</div>
+   <div>warning</div>
+   <div>Info</div>
+   <div>Light</div>
+   <div>Dark</div>
+   <div>Link</div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai Calculator</title>
+    <style>
+    h1{
+        color: darkcyan;
+     text-align: center;
+     font-size: 50px;
+    }
+    #Calculator{
+     border: 1px solid rgb(237, 231, 231);
+     width: 400px;
+     height: 450px;
+     margin: auto;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+     cursor: pointer;
+     padding: 20px;
+     
+    }
+    #display {
+     padding: 25px;
+     border: 2px solid rgb(242, 234, 234);
+     box-shadow: 100px;
+      margin-top: 50px;
+    width: 270px;
+    margin-left: 50px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: end;
+
+
+    
+   }
+   #keyboard {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,70px);
+    padding: 10px;
+    margin-left: 40px;
+    
+    
+    
+    
+   }
+   #keyboard > div{
+    border: 1px solid rgb(237, 237, 237);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: -15px;
+    
+
+    
+   }
+   #keyboard>div:hover{
+    background-color: aquamarine;
+    color: aliceblue;
+   }
+   .black{
+    background-color:black;
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: bold;
+   }
+   .red{
+    background-color: red;
+    color: aliceblue;
+    font-size: 30px;
+    font-weight: bold;
+    
+   }
+    </style>
+</head>
+<body>
+    <h1>Masai Calculator</h1>
+    <div id="Calculator">
+     <div id="display"></div>
+     <div id="keyboard">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div class="black">+</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div class="black">-</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div class="black">*</div>
+        <div class="red">C</div>
+        <div>0</div>
+        <div class="black">=</div>
+        <div class="black">/</div>
+       </div>
+    </div>
+</body>
+</html>
+<script>
+      let key= document.querySelectorAll("#keyboard > div")
+      let bag=""
+     key.forEach(function(ele){
+        ele.addEventListener("click",mycal)
+     })
+      function mycal(){
+     let target=event.target.innerText;
+     if(target=="C"  ){
+        bag=""
+        document.querySelector("#display").innerText=""
+     }else if
+       (target=="=" ){
+        document.querySelector("#display").innerText=eval(bag) 
+       }
+      else{
+        bag+=target 
+     document.querySelector("#display").innerText=bag
+     }
+     
+      }
+</script>

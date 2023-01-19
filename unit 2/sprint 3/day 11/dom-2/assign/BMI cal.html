@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <h1>Check your BMI</h1>
+    <p>Enter your weight and height below to check your BMI results</p>
+    <p>Put your weight in here(KG)</p>
+    <hr>
+    <input id="wt" type="number" placeholder="Enter your weight">
+    <hr>
+    <p>Put your height in here(CM)</p>
+    <hr>
+    <input id="ht" type="number" placeholder="Enter your height">
+    <hr>
+    <button onclick="mycal()">Calculate your BMI</button>
+    <p>Your BMI is <h1 id="display"></h1>  </p> 
+    <p>Which means You are <h2 id="quality"></h2></p>
+</body>
+</html>
+<script>
+    function mycal(){
+        let bag=""
+    let weight=document.querySelector("#wt").value
+     let height=document.querySelector("#ht").value
+     bag=weight/(height*height)
+      document.getElementById("display").innerText=bag
+      if(bag<=18.4){
+        document.getElementById("quality").innerText="UnderWeight"
+      }else if (bag>=18.5 && bag<=24.9){
+        document.getElementById("quality").innerText="Normal Weight"
+      }
+      else if(bag>=25 && bag<=29.9){
+        document.getElementById("quality").innerText="Overweight"
+      }
+      else{
+        document.getElementById("quality").innerText="obese"
+      }
+    }
+    
+</script>
