@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resize</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    let arr=[{name:"Primary",bgcolor:"blue",color:"white"},
+               {name:"Secondary",bgcolor:"grey",color:"white"},
+                {name:"Success",bgcolor:"green",color:"white"},
+            {name:"Danger",bgcolor:"red",color:"white"},
+        {name:"Warning",bgcolor:"yellow",color:"black"},
+        {name:"Info",bgcolor:"lightblue",color:"white"},
+      {name:"Light",bgcolor:"white",color:"black"},
+     {name:"Dark",bgcolor:"black",color:"white"},
+      {name:"Link",bgcolor:"white",color:"blue"}]
+    for(let i=0;i<arr.length;i++){
+        let btn=document.createElement("button")
+        btn.innerText=arr[i].name;
+        btn.style.backgroundColor=arr[i].bgcolor
+        btn.style.color=arr[i].color
+        document.querySelector("body").append(btn)
+    }
+
+    // let btn=document.querySelector("button")
+    // btn,addEventListener("click",myfun)
+    // function myfun(){
+    //     btn.backgroundColor="white"
+    //     btn.style.color="red"
+    //     btn.style.padding="20px"
+//    -------------------------------------------
+//    event.preventDefault()  it will give inline i.e input tag (form submit in console)
+//    ---------------------------------------------------------
+//   anchor tag :  a href with masai  
+
+// for anchor tag : document.querySelector("a").addEventListener("click",function(event){
+//     event.preventDefault()
+//    })
+//     }
+    // --------------------------------------------------
+    // let image=document.createElement("img")
+    // image.src=""
+   // image.style.width="100px"
+    // document.querySelector("body").append(image)
+   
+//    -----------------------------------------------------
+    // setAttribute("attributename","attributevalue")
+    // image.setAttribute("src","link of image")
+    // --------------------------------------------------------------
+    // className or ID to button 
+    // btn.setttribute("class","mybtn")
+    
+
+
+
+</script>
