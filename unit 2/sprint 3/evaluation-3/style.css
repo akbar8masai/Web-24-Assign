@@ -1,0 +1,80 @@
+
+  form {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 50%;
+   
+  }
+  
+  table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  table td,
+  table th {
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  table tr:hover {
+    background-color: #ddd;
+  }
+  
+  table th {
+ 
+    text-align: left;
+    background-color: #ae900b;
+    color: white;
+    text-align: center;
+  }
+  
+  input[type="text"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  
+  }
+  input[type="number"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+  }
+  
+  input[type="submit"] {
+    background-color: #46484b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+    
+  }
+  
+  h1,h2 {
+    text-align: center;
+    font-size: 30px;
+    color: #101112;
+  }
+
+  

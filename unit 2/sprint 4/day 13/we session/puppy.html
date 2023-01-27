@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage</title>
+    <style>
+   img{
+    width: 200px;
+   }
+    </style>
+</head>
+<body>
+    <img src="https://i.pinimg.com/originals/4f/60/5d/4f605d3d65b46838ad3807b4118ec921.jpg"  alt="Error">
+   <h1>Total likecount: <span></span></h1>
+   <h2>Total Dislike: <span></span></h2>
+    <button id="like">Like</button>
+    <button id="dislike">Dislike</button>
+   
+</body>
+</html>
+<script>
+    document.querySelector("#like").addEventListener("click",mylike)
+    let likecount=localStorage.getItem("Like")||0;
+    document.querySelector("h1>span").innerText=likecount
+    let dislikecount=localStorage.getItem("DisLike")||0;
+    document.querySelector("h2>span").innerText=dislikecount
+
+    // ------------------------------------------------------------
+//    let likecount;
+//    if(localStorage.getItem("Like")==null){
+//     likecount=0;
+//    }else{
+//     likecount=localStorage.getItem("likes")
+//    }
+
+    function mylike(){
+      likecount++
+      document.querySelector("h1>span").innerText=likecount
+      localStorage.setItem("Like",likecount)
+    }
+   
+    document.querySelector("#dislike").addEventListener("click",mydislike)
+   
+    function mydislike(){
+        dislikecount--
+        document.querySelector("h2>span").innerText=dislikecount
+        localStorage.setItem("DisLike",dislikecount)
+    }
+</script>

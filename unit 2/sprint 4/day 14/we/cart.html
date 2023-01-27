@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title><style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+    
+        #container>div{
+          
+            text-align: center;
+            padding-bottom: 20px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+        #container>div>img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Total Items: <span></span></h1>
+        <h2>Total cost in Rs: <span></span></h2>
+    <div id="container">
+       
+         
+    </div>
+</body>
+</html>
+
+<script>
+    let cartItems=JSON.parse(localStorage.getItem("cart_items"))
+    //console.log(cartItems)
+  let total_price= cartItems.reduce(function(acc,el){
+   return acc+ +(el.price);
+  },0)
+
+  document.querySelector("h2>span").innerText=total_price
+
+  document.querySelector("h1>span").innerText=cartItems.length
+
+    cartItems.forEach(function(el){
+        let card=document.createElement("div")
+
+        // creating Image
+        let productImg=document.createElement("img")
+        productImg.src=el.image_url
+        //productImg.style.width="100%"
+
+        //create h3
+
+        let title=document.createElement("h3")
+        title.innerText=el.title
+
+        //create p
+        let price=document.createElement("p")
+        price.innerText=el.price
+
+       
+
+        card.append(productImg,title,price)
+
+
+        document.querySelector("#container").append(card)
+
+       
+    })
+</script>

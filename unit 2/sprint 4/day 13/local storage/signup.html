@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up and login</title>
+    <style>
+        form {
+      margin: 0 auto;
+      margin-top: 50px;
+     width: 30%;
+     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+       padding: 30px;
+      }
+        h1{
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: aqua;
+        }
+
+        input[type="text"],select,textarea{
+            border: 1px solid black;
+            width: 100%;
+            resize: vertical;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+            margin-top: 6px;
+            padding: 12px;
+            
+        }
+        input[type="password"],select,textarea{
+            border: 1px solid black;
+            width: 100%;
+            resize: vertical;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+            margin-top: 6px;
+            padding: 12px;
+            
+        }
+        input[type="SUBMIT"],select,textarea{
+            border: 1px solid black;
+            width: 100%;
+            resize: vertical;
+            box-sizing: border-box;
+            margin-bottom: 16px;
+            margin-top: 6px;
+            padding: 12px;
+            
+        }
+
+    </style>
+</head>
+<body><form>
+    <h1>SIGN UP</h1>
+    <br>
+    Username:<input type="text" id="text" placeholder="EMAIL OR PHONE NUMBER">
+    <br><br><br>
+    password:<input type="password" id="pass" placeholder="Enter your password"><br><br>
+    <input type="submit" name="CONTINUE " id="submit">
+</form>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",login)
+
+   function login(event){
+    event.preventDefault()
+   let login_id=document.querySelector("#text").value
+   let login_pass=document.querySelector("#pass").value
+   // console.log(login_id,login_pass)
+
+
+    //localStorage.setItem("login_id",login_id)
+   // localStorage.setItem("login_pass",login_pass)
+   
+   if((login_id=="shaikhakki@gmail.com" || login_id=="8169337218") && login_pass=="shaikhakki"){         
+           alert("login successful")
+       }
+     else{
+        alert("wrong Credential")
+     }
+     
+   }
+
+</script>

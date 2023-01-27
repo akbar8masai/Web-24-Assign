@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>men shoe wear</title>
+</head>
+<style>
+    #container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+    }
+
+    #container>div{
+      
+        text-align: center;
+        padding-bottom: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    #container>div>img{
+        width: 100%;
+    }
+</style>
+<body>
+    <a href="cart.html" target="_blank"> <button>Go to Cart</button></a>
+   
+    <div id="container">
+    
+
+
+    </div>
+</body>
+</html>
+<script>
+    
+  
+    let MENSDATA=[{
+        id:1,
+        image_url:
+        "https://cdnb.lystit.com/photos/faf3-2014/01/10/nike-black-mens-air-pegasus-30-running-shoes-from-finish-line-product-1-16669463-0-242155602-normal.jpeg",
+        title:"MENS REEBOK SHOE",
+        price:"6599",
+        strikeoffprice:7999,
+    },{
+        id:2,
+        image_url:"https://cdnb.lystit.com/photos/faf3-2014/01/10/nike-black-mens-air-pegasus-30-running-shoes-from-finish-line-product-1-16669463-0-242155602-normal.jpeg",
+        title:"MENS PUMA SHOE",
+        price:"3999",
+        strikeoffprice:6999,
+    },{
+        id:3,
+        image_url:"https://cdnb.lystit.com/photos/faf3-2014/01/10/nike-black-mens-air-pegasus-30-running-shoes-from-finish-line-product-1-16669463-0-242155602-normal.jpeg",
+        title:"MENS NIKE SHOE",
+        price:"5599",
+        strikeoffprice:6999,
+    },{
+        id:4,
+        image_url:"https://cdnb.lystit.com/photos/faf3-2014/01/10/nike-black-mens-air-pegasus-30-running-shoes-from-finish-line-product-1-16669463-0-242155602-normal.jpeg",
+        title:"MENS BATA SHOE",
+        price:"35999",
+        strikeoffprice:39999,
+    },{
+        id:5,
+        image_url:"https://cdnb.lystit.com/photos/faf3-2014/01/10/nike-black-mens-air-pegasus-30-running-shoes-from-finish-line-product-1-16669463-0-242155602-normal.jpeg",
+        title:"MENS PARAGON SHOE",
+        price:"18999",
+        strikeoffprice:29999,
+    },{
+        id:6,
+        image_url:"https://cdnb.lystit.com/photos/faf3-2014/01/10/nike-black-mens-air-pegasus-30-running-shoes-from-finish-line-product-1-16669463-0-242155602-normal.jpeg",
+        title:"MENS WOODLAND SHOE",
+        price:"15999",
+        strikeoffprice:20999,
+    },{
+        id:7,
+        image_url:"https://cdnb.lystit.com/photos/faf3-2014/01/10/nike-black-mens-air-pegasus-30-running-shoes-from-finish-line-product-1-16669463-0-242155602-normal.jpeg",
+        title:"MENS GUCCI SHOE",
+        price:"11799",
+        strikeoffprice:20999,
+    },{
+        id:8,
+        image_url:"https://cdnb.lystit.com/photos/faf3-2014/01/10/nike-black-mens-air-pegasus-30-running-shoes-from-finish-line-product-1-16669463-0-242155602-normal.jpeg",
+        title:"MENS PRADA SHOE",
+        price:"18870",
+        strikeoffprice:25999,
+    },
+]
+
+let cartArr=JSON.parse(localStorage.getItem("cart_items"))||[]
+  // console.log(cartArr.length);
+    MENSDATA.forEach(function(el){
+        let card=document.createElement("div")
+
+        // creating Image
+        let productImg=document.createElement("img")
+        productImg.src=el.image_url
+        //productImg.style.width="100%"
+
+        //create h3
+
+        let title=document.createElement("h3")
+        title.innerText=el.title
+
+        //create p
+        let price=document.createElement("p")
+        price.innerText=el.price
+
+        //create button
+        let btn=document.createElement("button")
+        btn.innerText="Add to Cart"
+        btn.addEventListener("click",function (){
+            addtocart(el)
+        })
+
+        card.append(productImg,title,price,btn)
+
+
+        document.querySelector("#container").append(card)
+
+        localStorage.setItem("mensdata","9 products")
+    })
+
+    function addtocart(el){
+        //console.log(el)
+        cartArr.push(el)
+        localStorage.setItem("cart_items",JSON.stringify(cartArr))
+
+    }
+    
+</script>
