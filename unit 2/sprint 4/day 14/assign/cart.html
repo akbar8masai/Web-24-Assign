@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+        #container>div{
+      
+      text-align: center;
+      padding-bottom: 20px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      #container>div>img{
+      width: 100%;
+       }
+    </style>
+   
+</head>
+<body>
+    <h1>Total Items: <span></span></h1>
+        <h2>Total cost in Rs: <span></span></h2>
+        <p>COUPON CODE FOR MASAI30 </p>
+        
+       
+      <input id="code" type="text" placeholder="APPLY PROMO">
+      <input id="submit" type="submit">
+      <br><br>
+      <h3>Welcome to Payment Gateway</h3>
+      <form action="payment" method="POST">
+         <script
+            src="//checkout.stripe.com/v2/checkout.js"
+            class="stripe-button"
+            data-key="<%= key %>"
+            data-currency="inr"
+            data-locale="auto" >
+          </script>
+      </form>
+    <div id="container">
+      
+    
+    </div>
+</body>
+</html>
+
+<script>
+    let carttoItems=JSON.parse(localStorage.getItem("addtocart"))
+    let total_price= carttoItems.reduce(function(acc,el){
+     return acc+ +(el.price);
+     },0)
+     
+     document.querySelector("#submit").addEventListener("click",mycal)
+     
+     function mycal(event){
+      event.preventDefault()
+        let CODE=document.querySelector("#code").value
+       
+      if( CODE =="MASAI30"){
+        let price=total_price-(total_price*0.3)
+        document.querySelector("h2>span").innerText=price
+      }else{
+        document.querySelector("h2>span").innerText=total_price
+       }
+     }
+
+     document.querySelector("h1>span").innerText=carttoItems.length
+
+    carttoItems.forEach(function(el){
+    let card= document.createElement("div")
+    
+    let productImg=document.createElement("img")
+    productImg.src=el.image_url
+    
+    let title=document.createElement("h3")
+    title.innerText=el.name
+ 
+    let price=document.createElement("p")
+    price.innerText=el.price
+    
+   let btn=document.createElement("button")
+   btn.innerText="remove"
+   btn.style.color="red"
+   btn.addEventListener("click",myfun)
+ 
+    card.append(productImg,title,price,btn)
+ 
+    document.querySelector("#container").append(card)
+     
+    function myfun(event){
+       console.log(event)
+        event.target.parentNode.remove()
+       
+    }
+
+  
+   })
+
+ </script>

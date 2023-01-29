@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Womens page</title>
+    <style>
+        #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+        #container>div{
+      
+      text-align: center;
+      padding-bottom: 20px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      #container>div>img{
+      width: 100%;
+       }
+    </style>
+</head>
+<body>
+    <a href="cart.html" target="_blank"><button>Go to Cart</button></a>
+
+    <div id="container">
+
+    </div>
+</body>
+</html>
+<script>
+ 
+
+
+var womensData = [
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK PRINT LEGGINGS ",
+      price: 1549,
+      strikedoffprice: 1799,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK POLYTIGHT",
+      price: 1249,
+      strikedoffprice: 1749,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK SLEEVE TEE",
+      price: 699,
+      strikedoffprice: 1245,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK CLASSIC LEGGINGS",
+      price: 1399,
+      strikedoffprice: 2799,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK CLASSIC TIGHTS",
+      price: 1099,
+      strikedoffprice: 1249,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "UNISEX REEBOK SHOW SHOES",
+      price: 1249,
+      strikedoffprice: 1489,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S CLASSIC REEBOK PANTS",
+      price: 1459,
+      strikedoffprice: 1235,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK RUNNING RUN ESSENTIALS SHORT SLEEVE GRAPHIC",
+      price: 849,
+      strikedoffprice: 2599,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK TRAINING WOR MESH TIGHTS",
+      price: 1550,
+      strikedoffprice: 2599,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK RUNNING OSR HIGH-IMPACT BRA",
+      price: 1399,
+      strikedoffprice: 6599,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK PRINT LEGGINGS ",
+      price: 1549,
+      strikedoffprice: 1799,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK POLYTIGHT",
+      price: 1249,
+      strikedoffprice: 1749,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK SLEEVE TEE",
+      price: 699,
+      strikedoffprice: 1245,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK CLASSIC LEGGINGS",
+      price: 1399,
+      strikedoffprice: 2799,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK CLASSIC TIGHTS",
+      price: 1099,
+      strikedoffprice: 1249,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "UNISEX REEBOK SHOW SHOES",
+      price: 1249,
+      strikedoffprice: 1489,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S CLASSIC REEBOK PANTS",
+      price: 1459,
+      strikedoffprice: 1235,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK RUNNING RUN ESSENTIALS SHORT SLEEVE GRAPHIC",
+      price: 849,
+      strikedoffprice: 2599,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK TRAINING WOR MESH TIGHTS",
+      price: 1550,
+      strikedoffprice: 2599,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK RUNNING OSR HIGH-IMPACT BRA",
+      price: 1399,
+      strikedoffprice: 6599,
+    },
+    
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK PRINT LEGGINGS ",
+      price: 1549,
+      strikedoffprice: 1799,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK POLYTIGHT",
+      price: 1249,
+      strikedoffprice: 1749,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK SLEEVE TEE",
+      price: 699,
+      strikedoffprice: 1245,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK CLASSIC LEGGINGS",
+      price: 1399,
+      strikedoffprice: 2799,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK CLASSIC TIGHTS",
+      price: 1099,
+      strikedoffprice: 1249,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "UNISEX REEBOK SHOW SHOES",
+      price: 1249,
+      strikedoffprice: 1489,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S CLASSIC REEBOK PANTS",
+      price: 1459,
+      strikedoffprice: 1235,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK RUNNING RUN ESSENTIALS SHORT SLEEVE GRAPHIC",
+      price: 849,
+      strikedoffprice: 2599,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK TRAINING WOR MESH TIGHTS",
+      price: 1550,
+      strikedoffprice: 2599,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK RUNNING OSR HIGH-IMPACT BRA",
+      price: 1399,
+      strikedoffprice: 6599,
+    },
+   
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK PRINT LEGGINGS ",
+      price: 1549,
+      strikedoffprice: 1799,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK POLYTIGHT",
+      price: 1249,
+      strikedoffprice: 1749,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK SLEEVE TEE",
+      price: 699,
+      strikedoffprice: 1245,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK CLASSIC LEGGINGS",
+      price: 1399,
+      strikedoffprice: 2799,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK CLASSIC TIGHTS",
+      price: 1099,
+      strikedoffprice: 1249,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "UNISEX REEBOK SHOW SHOES",
+      price: 1249,
+      strikedoffprice: 1489,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S CLASSIC REEBOK PANTS",
+      price: 1459,
+      strikedoffprice: 1235,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK RUNNING RUN ESSENTIALS SHORT SLEEVE GRAPHIC",
+      price: 849,
+      strikedoffprice: 2599,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK TRAINING WOR MESH TIGHTS",
+      price: 1550,
+      strikedoffprice: 2599,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK RUNNING OSR HIGH-IMPACT BRA",
+      price: 1399,
+      strikedoffprice: 6599,
+    },
+   
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK PRINT LEGGINGS ",
+      price: 1549,
+      strikedoffprice: 1799,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK POLYTIGHT",
+      price: 1249,
+      strikedoffprice: 1749,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK SLEEVE TEE",
+      price: 699,
+      strikedoffprice: 1245,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK PP TIGHTS",
+      price: 749,
+      strikedoffprice: 1299,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK CLASSIC LEGGINGS",
+      price: 1399,
+      strikedoffprice: 2799,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK CLASSIC TIGHTS",
+      price: 1099,
+      strikedoffprice: 1249,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "UNISEX REEBOK SHOW SHOES",
+      price: 1249,
+      strikedoffprice: 1489,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S CLASSIC REEBOK PANTS",
+      price: 1459,
+      strikedoffprice: 1235,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK RUNNING RUN ESSENTIALS SHORT SLEEVE GRAPHIC",
+      price: 849,
+      strikedoffprice: 2599,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK TRAINING WOR MESH TIGHTS",
+      price: 1550,
+      strikedoffprice: 2599,
+    },
+    {
+      image_url:
+        "https://www.libertyshoesonline.com/pub/media/catalog/product/cache/d27f3f74a53679e84179ee8edfe784ba/l/p/lpm-122_tan_1_1.jpg",
+      name: "WOMEN'S REEBOK RUNNING OSR HIGH-IMPACT BRA",
+      price: 1399,
+      strikedoffprice: 6599,
+    },
+   
+  ];
+  
+  let cartArr=JSON.parse(localStorage.getItem("addtocart"))||[]
+
+  womensData.forEach(function(el){
+   let card= document.createElement("div")
+   
+   let productImg=document.createElement("img")
+   productImg.src=el.image_url
+   
+   let title=document.createElement("h3")
+   title.innerText=el.name
+
+   let price=document.createElement("p")
+   price.innerText=el.price
+   
+   let strikedoffprice=document.createElement("p")
+   strikedoffprice.innerText=el.strikedoffprice
+   strikedoffprice.style.textDecoration="line-through"
+
+   let btn=document.createElement("button")
+   btn.innerText="add to cart"
+   btn.addEventListener("click",function(){
+    carttoitems(el)
+   })
+
+   card.append(productImg,title,price,strikedoffprice,btn)
+
+   document.querySelector("#container").append(card)
+   
+
+  })
+   
+   function carttoitems(el){
+    cartArr.push(el)
+    localStorage.setItem("addtocart",JSON.stringify(cartArr))
+   }
+</script>

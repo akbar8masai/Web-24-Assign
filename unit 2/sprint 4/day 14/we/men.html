@@ -43,6 +43,8 @@
         title:"MENS REEBOK SHOE",
         price:"6599",
         strikeoffprice:7999,
+        
+       
     },{
         id:2,
         image_url:"https://cdnb.lystit.com/photos/faf3-2014/01/10/nike-black-mens-air-pegasus-30-running-shoes-from-finish-line-product-1-16669463-0-242155602-normal.jpeg",
@@ -119,7 +121,7 @@ let cartArr=JSON.parse(localStorage.getItem("cart_items"))||[]
 
         document.querySelector("#container").append(card)
 
-        localStorage.setItem("mensdata","9 products")
+        //localStorage.setItem("mensdata","9 products")
     })
 
     function addtocart(el){
