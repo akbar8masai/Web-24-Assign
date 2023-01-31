@@ -47,13 +47,14 @@
        function handlesalary(){
          let selected=document.querySelector("#sal").value
          console.log(selected);
+
          if(selected=="ASC"){
           applyjob.sort(function(a,b){
            return a.person_sal-b.person_sal;
             }) 
             displayTable(applyjob)
          }
-         if(selected=="DSC"){
+          if(selected=="DSC"){
           applyjob.sort(function(a,b){
            return b.person_sal-a.person_sal;
             }) 

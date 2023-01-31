@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rejected</title>
+    <style>
+          * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(248, 246, 246);
+}
+/* Navbar related css */
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1%;
+  box-shadow: 2px 2px 5px 5px rgb(235, 235, 235);
+}
+
+.navbar > div {
+  display: flex;
+  list-style: none;
+}
+.navbar a {
+  text-decoration: none;
+  color: teal;
+  font-size: 10px;
+}
+table {
+  width: 60%;
+  margin: auto;
+  margin-top: 50px;
+  text-align: center;
+}
+table td,
+table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  background-color: #8caacf;
+}
+
+table tr:nth-child(even) {
+  background-color: #8caacf;
+}
+
+table tr:hover {
+  background-color: #ddd;
+}
+    </style>
+
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="./index.html">
+            <h1>Add Students</h1>
+        </a>
+        <a href="./students.html">
+            <h1>Students Database</h1>
+        </a>
+        <a href="./admitted.html">
+            <h1>Admitted</h1>
+        </a>
+        <a href="./rejected.html">
+            <h1>Rejected</h1>
+        </a>
+    </div>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Course</th>
+                <th>Gender</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- All the rows should be appended here  -->
+        </tbody>
+    </table>
+</body>
+<script src="./rejected.js"></script>
+
+</html>
