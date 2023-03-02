@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masai form</title>
+    <style>
+         *{
+      margin: auto;
+      padding: 0;
+      box-sizing: border-box;
+    
+    }
+     a{
+        
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+       margin: auto;
+       padding: 10px;
+     }
+     form{
+        width: 250px;
+        padding: 20px;
+        line-height: 25px;
+        background-color: aliceblue;
+        
+       }
+       h1{
+        text-align: center;
+        padding-top: 20px;
+       }
+
+    </style>
+</head>
+<body>
+    <button>
+   <a href="./dashboard.html">dashboard</a>
+</button>
+   <h1>ADD STUDENTS DATA</h1>
+    <form id="studentsdata" onsubmit="storedata(event)">
+        <input type="text" placeholder="name" id="name"/>
+        <input type="text" placeholder="course" id="course"/>
+        <input type="number" placeholder="unit" id="unit"/>
+        <input type="text" placeholder="image" id="image"/>
+       <input type="number" placeholder="FT-WEB BATCH NO." id="batch"/>
+       <input type="submit"/>
+    </form>
+    
+</body>
+</html>
+<script src="./js201.js"></script>

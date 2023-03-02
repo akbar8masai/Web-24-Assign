@@ -179,14 +179,25 @@
         let target=event.target.innerText;
         let min= document.querySelector("#red").innerText
         let max= document.querySelector("#green").innerText
+        
           if(target=="ENTER"){
-            bag=""
-            document.querySelector("#grey").innerText=bag;
+             if(target < min){
+                document.querySelector("#grey").innerText=min ;
+             }
+             
+             if(target > max){
+                document.querySelector("#grey").innerText=max;
+            }
+            else if(target> min && target < max){
+                document.querySelector("#grey").innerText=bag;
             }
             
-        else{
+            }
+            
+        else {
             bag+=target
-            document.querySelector("#grey").innerText=bag
-        
+           document.querySelector("#grey").innerText=bag
+        }
     }
+    
 </script>

@@ -1,0 +1,15 @@
+input,select{
+    display: block;
+    margin: auto;
+    font-size: 20px;
+    width: 300px;
+   
+}
+form {
+    width: 400px;
+    border: 1px solid rgb(230, 230, 230);
+    margin:  auto;
+    padding: 20px;
+    background: white;
+  
+  }
