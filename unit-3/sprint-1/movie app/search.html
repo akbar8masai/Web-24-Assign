@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+     #search_div{
+        margin-top: 3%;
+        margin-left: 1%;
+     }
+     #loader_div{
+        text-align: center;
+      }
+      #lhs{
+        display: flex;
+       
+      }
+      #poster{
+        width: 60%;
+      }
+    </style>
+</head>
+<body>
+    <div id="navar">
+        <div id="lhs">
+        <a href="./index.html"><img src="https://cdn.mos.cms.futurecdn.net/c6fFaJ2NrD7u2g8TP2u2iY.jpg" alt="Error"></a>
+            <h4>TV</h4>
+            <h4>MOVIES</h4>
+            <h4>Sports</h4>
+            <h4>Disney+</h4>  
+            <h4>Kids</h4>    
+        </div>
+    </div>
+    <div id="search_div">Search Movies:
+        <input oninput="searchMovies()" type="text" id="movie_name"/>
+
+    </div>
+
+    <!-- -----------------we need to loader here---------------------- -->
+    <div id="loader_div">
+
+        <img id="loader_gif" src="https://media1.tenor.com/images/d6cd5151c04765d1992edfde14483068/tenor.gif?itemid=5662595" alt="Error">
+
+
+    </div>
+   <div id="movies">
+
+   </div>
+
+</body>
+</html>
+<script src="./search.js"></script>

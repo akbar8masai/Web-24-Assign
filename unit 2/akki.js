@@ -79,19 +79,31 @@
 // 3 2 1
 // 1 3 2
 
-let a=[3,2,1]
-let b=[1,3,2]
+// let a=[3,2,1]
+// let b=[1,3,2]
 
-let count=0;
+// let count=0;
 
-for(let i=0;i<a.length;i++){
+// for(let i=0;i<a.length;i++){
     
-    var temp = a[i+1];
-    a[i+1] = a[i];
-    a[i] = temp;
-      console.log(a);
-    }
+//     var temp = a[i+1];
+//     a[i+1] = a[i];
+//     a[i] = temp;
+//       console.log(a);
+//     }
  
 
 
 // JSON.stringify(a) === JSON.stringify(b)
+
+// constructive JS
+
+// let str="hello"
+
+// let str1= new String("hello")
+
+// console.log(str1);
+
+
+
+// -----------------------------------------
