@@ -33,27 +33,27 @@ app.post('/api/login', (req, res) => {
 
   
 
-  if (data.token) {
-    // Store session information in cookie or local storage
-    localStorage.setItem('token', data.token);
+  // if (data.token) {
+  //   // Store session information in cookie or local storage
+  //   localStorage.setItem('token', data.token);
     
-    // Redirect to protected page
-    window.location.href = '/protected-page.html';
-  } else {
-    // Display error message
-  }
-  const token = localStorage.getItem('token');
-  if (!token) {
-    window.location.href = '/login.html';
-  } else {
-    // Verify session token on the server
-    const response = await fetch('/api/verify-session', {
-      headers: { Authorization: `Bearer ${token}` },
-    });
+  //   // Redirect to protected page
+  //   window.location.href = '/protected-page.html';
+  // } else {
+  //   // Display error message
+  // }
+  // const token = localStorage.getItem('token');
+  // if (!token) {
+  //   window.location.href = '/login.html';
+  // } else {
+  //   // Verify session token on the server
+  //   const response = await fetch('/api/verify-session', {
+  //     headers: { Authorization: `Bearer ${token}` },
+  //   });
     
-    if (!response.ok) {
-      localStorage.removeItem('token');
-      window.location.href = '/login.html';
-    }
-  }
+  //   if (!response.ok) {
+  //     localStorage.removeItem('token');
+  //     window.location.href = '/login.html';
+  //   }
+  // }
     

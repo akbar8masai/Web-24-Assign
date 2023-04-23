@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     #navbar {
+    display: flex;
+    justify-content: center;
+  }
+  #navbar div {
+    display: flex;
+    justify-content: center;
+    border: solid 1px black;
+  }
+  #logo {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  #logo img {
+    width: 30%;
+  }
+
+  #search {
+    flex: 2;
+    display: flex;
+    text-align: center;
+    align-items: center;
+  }
+  #search input{
+
+    height: 40%;
+    width: 80%;
+ 
+  }
+
+  #options {
+    flex: 3;
+    display: flex;
+    align-items: center;
+  }
+    </style>
+</head>
+<body>
+     <div id="logo">
+   <a href='/'> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png" alt="" /></a>
+  </div>
+  <div id="search">
+  <input type='text'/> 
+</div>
+
+  <div id="options">
+    <a href="/create.html"><button id='submit_btn'>Create Post</button></a>
+  </div>
+</body>
+</html>

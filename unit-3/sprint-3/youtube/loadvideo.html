@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video page</title>
+    <style>
+       
+        #video_details{
+            flex:7;
+        }
+
+        #recommendation{
+            flex:3;
+        }
+        #navbar{
+        display: flex;
+    }
+    #lhs{
+        display: flex;
+        padding: 20px;
+    
+    }
+  
+    #icon1{
+        width: 5%;
+        padding: 20px;
+    }
+    #icon2{
+        width: 12%;
+        padding-left: 60px;
+    }
+    #middle img{
+        width: 5%;
+       
+    }
+    #rhs img{
+      width: 30%;
+      padding-right: 100px;
+      padding-top: 40px;
+    }
+    #middle{
+        display: flex;
+        margin: auto;
+        padding-right: 500px;
+    }
+          #container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 10px;
+            margin: 3%;
+            justify-items: center;
+        }
+        #container img{
+            width: 80%;
+        }
+    </style>
+</head>
+<body >
+    
+    
+    <div id="navbar">
+        <div id="lhs">
+            <img id="icon1" src="https://logodix.com/logo/1038930.png" alt="error">
+            <img id="icon2" src="https://www.youtube.com/img/desktop/yt_1200.png" alt="error">
+        </div>
+        <div id="middle">
+        <div >
+        <input  type="text" id="search_term"/>
+        </div>
+        <div>
+        <button id='search_button'>
+        
+            <img id="search_icon" src="https://t3.ftcdn.net/jpg/04/99/34/78/360_F_499347841_IXq0bLOPN4MkKAa71nP3WMQq6LVlgeTO.jpg" alt="error"></button>
+        </div>
+        </div>
+        <div id="rhs">
+        <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu5VtQoOrlTQaLatKpvRhPdOR7_IRUYd-1s4Ub8JrQ&s" alt="error">
+        </div>`
+
+    </div>
+    <div id="container">
+
+        <div id="video_details">video
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/HXV3zeQKqGY"
+                 title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+                  encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+        </div>
+        <div id="recommendation">recommendation</div>
+
+    </div>
+</body>
+</html>
+<script src="./video.js"></script>

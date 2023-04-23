@@ -10,12 +10,12 @@ async function searchMovies(){
 
    try{
 
-   let response = await fetch(`http://www.omdbapi.com/?apikey=e17054db&s=${movie_name}&page=2`)
+   let response = await fetch(`http://www.omdbapi.com/?apikey=e17054db&s=${movie_name}&page=2`);
 
-   let data = await response.json()
+   let data = await response.json();
    //console.log(data);
 
-   let actual_data =data.search
+   let actual_data =data.search;
    
    appendMovies(actual_data)
 
