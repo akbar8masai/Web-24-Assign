@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Web-24-Assign/static/css/main.377cc8a3.css",
+    "main.js": "/Web-24-Assign/static/js/main.cd8af85c.js",
+    "static/js/787.719ec76d.chunk.js": "/Web-24-Assign/static/js/787.719ec76d.chunk.js",
+    "index.html": "/Web-24-Assign/index.html",
+    "main.377cc8a3.css.map": "/Web-24-Assign/static/css/main.377cc8a3.css.map",
+    "main.cd8af85c.js.map": "/Web-24-Assign/static/js/main.cd8af85c.js.map",
+    "787.719ec76d.chunk.js.map": "/Web-24-Assign/static/js/787.719ec76d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.377cc8a3.css",
+    "static/js/main.cd8af85c.js"
+  ]
+}
