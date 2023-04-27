@@ -4,26 +4,81 @@
 //Also getbootstrap.com through which we get all type of css framework by bootstrap => doc details will give all types of components
 import './App.css';
 
-import PropTypes from 'prop-types'  //impt for shortcut
+import PropTypes from 'prop-types'
+  //impt for shortcut
 
 
 import Navbar from "./components/Navbar";
 
 import Textform from './components/Textform';
 
-//import About from './components/About';
+ import About from './components/About';
+import React,{useState} from 'react'
+
+import Alert from './components/Alert';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 function App() {
+
+  const [mode,setmode] =useState("light")
+
+  const [alert,setalert]=useState(null)
+
+  const showAlert=(message,type)=>{
+     setalert({
+      msg:message,
+      type:type
+     })
+     setTimeout(() => {
+       showAlert(null)
+     }, 3000);
+  }
+
+  const toggleMode=()=>{
+    if(mode==="light"){
+      setmode("dark")
+      document.body.style.backgroundColor="grey"
+      showAlert("success:This is dark mode")
+      document.title="TextUtils-dark mode"
+    }else{
+      setmode('light')
+      document.body.style.backgroundColor="white"
+      showAlert("success:This is light mode")
+      document.title="TextUtils-light mode"
+    }
+  }
+
+   
+   // for navbar change set mode both in navbar 5 line with props and bagtix
   return (
     <>
-   
-   <Navbar title="TextUtils" About="About Us"/>
+     <Router>
+   <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode}  About="About Us"/>
+   <Alert  alert={alert} />
    <div className="container">
-   <Textform heading="Enter the text to analyze below"/>
-  
+     <Switch>
+          <Route exact path="/About"> 
+            {/* use exact for path always  {/user--> component 1} {/user/home---> component 2} */}
+            <About />
+          </Route>
+          <Route exact path="/"> 
+          <Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={mode}/>
+          </Route>
+         </Switch>
+          </div>
+       </Router> 
+     
    {/* <About/> */}
+    
+
    
-   </div>
+   
+  
    
     </>
   );
@@ -45,6 +100,8 @@ Navbar.defaultProps = {
  title:"enter title",
  About:"enter text here"
 };
+
+
 
 // Navbar.propTypes = {
 //   title: PropTypes.string.isRequired,

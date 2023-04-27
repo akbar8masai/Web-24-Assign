@@ -10,7 +10,7 @@ export default function About() {
      const [btntext,setBtntext]=useState("Enable dark mode")
    
    const  togglestyle=()=>{
-        if(mystyle.color ==="black"){
+        if ( mystyle.color === "black"){
         setmystyle({
             color:"white",
             backgroundColor:"black",
