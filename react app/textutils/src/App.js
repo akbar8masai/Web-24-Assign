@@ -38,18 +38,28 @@ function App() {
        showAlert(null)
      }, 3000);
   }
+  const removeBodyclasses=()=>{
+    document.body.classList.remove("bg-primary")
+    document.body.classList.remove("bg-secondary")
+    document.body.classList.remove("bg-light")
+    document.body.classList.remove("bg-success")
+    document.body.classList.remove("bg-danger")
+  }
 
-  const toggleMode=()=>{
+  const toggleMode=(cls)=>{
+    removeBodyclasses()
+    console.log(cls)
+    document.body.classList.add("bg-"+cls)
     if(mode==="light"){
       setmode("dark")
       document.body.style.backgroundColor="grey"
       showAlert("success:This is dark mode")
-      document.title="TextUtils-dark mode"
+      // document.title="TextUtils-dark mode"
     }else{
       setmode('light')
       document.body.style.backgroundColor="white"
       showAlert("success:This is light mode")
-      document.title="TextUtils-light mode"
+      // document.title="TextUtils-light mode"
     }
   }
 

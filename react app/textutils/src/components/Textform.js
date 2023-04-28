@@ -26,9 +26,9 @@ export default function Textform(props) {
     props.showAlert("Text is clear","success")
    }
    const handlecopy=()=>{
-    var text = document.getElementById('myBox')
-    text.select();
-    navigator.clipboard.writeText(text.value);
+   // var text = document.getElementById('myBox')
+    //text.select();
+    navigator.clipboard.writeText(text);
     props.showAlert("Text is copied","success")
    }
    const handleExtraspace=()=>{
@@ -62,10 +62,10 @@ export default function Textform(props) {
     <div className="container my-3"style={{color:props.mode==="light"?'black':'white',backgroundColor:props.mode==="light"?'white':'grey'}}>     
     {/* //my-2 is for margin  */}
       <h2>your text summary</h2>
-      <p>{text.split(" ").filter((el)=>{return el.length!==0}).length} words and {text.length} characters</p>
+      <p>{text.split(/\s+/).filter((el)=>{return el.length!==0}).length} words and {text.length} characters</p>
       <p>{0.008 * text.split(" ").filter((el)=>{return el.length!==0}).length}Minutes to read the words</p>
      <h2>Preview</h2>
-     <p>{text.length>0?text:"Enter your text to preview here"}</p>
+     <p>{text.length>0?text:"Nothing Preview"}</p>
     </div>
     </>
   )
