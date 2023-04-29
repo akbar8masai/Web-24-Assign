@@ -1,7 +1,24 @@
 import React, { Component } from 'react'
 
 import NewsItem from './NewsItem'
+
+import Spinner from './Spinner'
+
+import PropTypes from 'prop-types'
+
+
 export default class News extends Component {
+     static defaultProps ={
+      country:"in",
+      pageSize:8,
+      category:"general"
+     }
+
+     static propTypes ={
+      country:PropTypes.string,
+      pageSize:PropTypes.number,
+      category:PropTypes.string,
+     }
     // articles= [
     //     {
     //     "source": {
@@ -43,62 +60,96 @@ export default class News extends Component {
     //     "content": "Last week, we at ESPNcricinfo did something we have been thinking of doing for eight years now: pretend-live ball-by-ball commentary for a classic cricket match. We knew the result, yes, but we tried… [+6823 chars]"
     //     }
     //     ]
-    constructor(){
-        super()
+    capitalizeFirstLetter=(string)=> {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    constructor(props){
+        super(props)
         console.log("this is constructor component from news" )
         this.state={
                 //  articles:this.articles,
                 articles:[],
                 //  refer : react.js state and lifecycle
-                 loading:false
+                 loading:false,
+                 page:1
               }
+              document.title=`${this.capitalizeFirstLetter(this.props.category)}-NewsZebra`
         }
+      
+       async updateNews(){
+        const url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=16e5f94af9694891b6ccfc3d5ec5c2b8&page=${this.state.page}&pagesize=${this.props.pageSize}`
+        this.setState({loading:"true"})
+        let data =await fetch(url)
+       
+        let parsedData =await data.json()
+       // console.log(parsedData)
+         this.setState({articles : parsedData.articles,totalResults:parsedData.totalResults,loading:false})
+
+       }
 
        async componentDidMount(){
-           let url = "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=16e5f94af9694891b6ccfc3d5ec5c2b8"
-          let data =await fetch(url)
-          let parsedData =await data.json()
-         // console.log(parsedData)
-           this.setState({articles : parsedData.articles})
+        //    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=16e5f94af9694891b6ccfc3d5ec5c2b8&page=1&pagesize=${this.props.pageSize}`
+        //   let data =await fetch(url)
+        //   this.setState({loading:"true"})
+        //   let parsedData =await data.json()
+        //  // console.log(parsedData)
+        //    this.setState({articles : parsedData.articles,totalResults:parsedData.totalResults,loading:false})
+        this.updateNews()
        }
        handleNextclick=async()=>{
         //   console.log("next")
-        let url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=16e5f94af9694891b6ccfc3d5ec5c2b8&page=${this.state.page+1}`
-        let data =await fetch(url)
-        let parsedData =await data.json()
-        this.setState({
-            page: this.state.page + 1,
-            articles : parsedData.articles
-        })
+      //   if(!(this.state.page +1  > Math.ceil(this.state.totalResults/this.props.pageSize))){
+      //   let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=16e5f94af9694891b6ccfc3d5ec5c2b8&page=${this.state.page+1}&pagesize=${this.props.pageSize}`
+      //   let data =await fetch(url)
+      //   this.setState({loading:"true"})
+      //   let parsedData =await data.json()
+      //   this.setState({
+      //       page: this.state.page + 1,
+      //       articles : parsedData.articles,
+      //       loading:"false"
+      //   })
+      //   // Note:loading :false & true means data will be loading condition
+      //  }
+
+      this.updateNews()
+      this.setState({page:this.state.page + 1})
        }
        handlePrevclick=async()=>{
         // console.log("prev")
-        let url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=16e5f94af9694891b6ccfc3d5ec5c2b8&page=${this.state.page-1}`
-        let data =await fetch(url)
-        let parsedData =await data.json()
-        this.setState({
-            page: this.state.page - 1,
-            articles : parsedData.articles
-        })
+        // let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=16e5f94af9694891b6ccfc3d5ec5c2b8&page=${this.state.page-1}&pagesize=${this.props.pageSize}`
+        // let data =await fetch(url)
+        // this.setState({loading:"true"})
+        // let parsedData =await data.json()
+        // this.setState({
+        //     page: this.state.page - 1,
+        //     articles : parsedData.articles,
+        //     loading:"false"
+        // })
+        this.setState({page:this.state.page - 1})
+        this.updateNews()
        }
   render() {
     return (
+      <>
       <div className='container my-3'>
-        <h2>NewsZebra-Top Headlines</h2>
+        <h2 className='text-center'>NewsZebra-Top {this.capitalizeFirstLetter(this.props.category)} Headlines   </h2>
+           {this.state.loading && <Spinner/>}
         <div className="row">
-            {this.state.articles.map((el)=>{
+            {!this.state.loading && this.state.articles.map((el)=>{
                return <div className="col-md-4" key={el.url}>
                   {/* col-md-4 = column medium devices form 12 column means 4*3 in set  */}
-              <NewsItem title={el.title?el.title.slice(0,45):""} description={el.description?el.description.slice(0,88):""} imageUrl={el.urlToImage?el.urlToImage:""} NewsUrl={el.url}/>
+              <NewsItem title={el.title?el.title:""} description={el.description?el.description:""} imageUrl={el.urlToImage?el.urlToImage:""} NewsUrl={el.url} author={el.author?el.author:"Author"} date={el.publishedAt}/>
+              {/* <NewsItem title={el.title?el.title.slice(0,45):""} description={el.description?el.description.slice(0,88):""} imageUrl={el.urlToImage?el.urlToImage:""} NewsUrl={el.url}/> */}
               </div>
             })}
         </div>
         <div className="container d-flex justify-content-between">
-        <button disabled={this.state.page<=1} type="button" class="btn btn-dark " onClick={this.handlePrevclick}> &larr; Previous</button>
-        <button type="button" class="btn btn-dark " onClick={this.handleNextclick}>Next &rarr; </button>
+        <button disabled={this.state.page<=1} type="button" className="btn btn-dark " onClick={this.handlePrevclick}> &larr; Previous</button>
+        <button disabled={this.state.page +1  > Math.ceil(this.state.totalResults/this.props.pageSize)} type="button" className="btn btn-dark " onClick={this.handleNextclick}>Next &rarr; </button>
         {/* //html arrow for refer */}
         </div>
        </div>
+       </>
     )
   }
 }

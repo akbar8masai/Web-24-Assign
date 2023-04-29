@@ -73,11 +73,11 @@ function App() {
    <div className="container">
      <Switch>
           <Route exact path="/About"> 
-            {/* use exact for path always  {/user--> component 1} {/user/home---> component 2} */}
-            <About />
+            {/* use exact for path always  {/user--> component 1} {/user/home---> component 2} & unique key for in key="" */}
+            <About key="About"/>
           </Route>
           <Route exact path="/"> 
-          <Textform showAlert={showAlert} heading="Enter the text to analyze below" mode={mode}/>
+          <Textform  showAlert={showAlert} heading="Enter the text to analyze below" mode={mode}/>
           </Route>
          </Switch>
           </div>
