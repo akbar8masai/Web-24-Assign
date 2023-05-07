@@ -7,22 +7,25 @@ connectToMongo();
 const app = express()
 const port = 7000
 
+
+
+app.use(express.json())
 //Avaialble Routes
-app.use('./api/v1/auth',require('./routes/auth'))
+app.use('/api/auth',require('./routes/auth'))
 
-// app.use('./api/notes',require('./routes/notes'))
+app.use('/api/notes',require('./routes/notes'))
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+// app.get('/', (req, res) => {
+//   res.send('Hello World!')
+// })
 
-app.get('/api/v1/login', (req, res) => {
-    res.send('success log')
-  })
+// app.get('/api/v1/login', (req, res) => {
+//     res.send('success log')
+//   })
 
-  app.get('/api/v1/signup', (req, res) => {
-    res.send('success signup')
-  })
+//   app.get('/api/v1/signup', (req, res) => {
+//     res.send('success signup')
+//   })
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
