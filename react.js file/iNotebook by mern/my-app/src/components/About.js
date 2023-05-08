@@ -1,7 +1,7 @@
 // import React, { useContext, useEffect } from 'react'
 // import noteContext from '../context/notes/noteContext'
 
-
+import React from "react"
 
 
 const About=()=>{
@@ -14,7 +14,7 @@ const About=()=>{
     return (
       <div>
         {/* This is About {a.state.name} in class {a.state.class} */}
-        <h1>yoyo</h1>
+        
       </div>
     )
   

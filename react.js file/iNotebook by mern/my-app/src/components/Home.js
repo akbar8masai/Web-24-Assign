@@ -1,11 +1,16 @@
-import React, { Component } from 'react'
+import React from "react";
 
-export default class Home extends Component {
-  render() {
+import Notes from "./Notes";
+
+
+
+ const Home=()=> {
     return (
       <div>
-        
+     
+       <Notes/>
       </div>
-    )
-  }
+    );
 }
+
+export default Home
