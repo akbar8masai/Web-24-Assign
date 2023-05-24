@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery tutorial</title>
+  </head>
+  <body>
+    <p id="hi">this is my body</p>
+    <p>this is my body1</p>
+    <p>this is my body2</p>
+    <p>this is my body3</p>
+    <p class="hiii">this is my body4</p>
+    <button id="btn">Toggle Now</button>
+    <div id="wiki">
+      f you’ve been following along with recent jQuery releases, we have been working on how to address the recent addition of some new selectors in browsers, especially :has. jQuery 3.6.3 settled on the strategy of using native CSS.supports to determined whether a selector should be passed directly to querySelectorAll or instead go through jQuery’s selector engine, as might be the case when using jQuery selector extensions, complex :not(), or other selectors that are valid in jQuery but not in the browser. That all technically worked fine, but came with a downside. Fortunately for us, the fix is no longer necessary and we can go back to the old way. More on that below.
+
+As usual, the release is available on our cdn and the npm package manager. Other third party CDNs will probably have it soon as well, but remember that we don’t control their release schedules and they will need some time. Here are the highlights for jQuery 3.6.4.
+    </div>
+    <form >
+      <input type="text" id="inp">
+      <textarea id="ta">this is your text</textarea>
+    </form>
+  </body>
+
+  <script src="./jquery-3.6.4.min.js"></script>
+  <!-- //jquery cdn for same script as jquery  -->
+  <!-- script
+//   src="https://code.jquery.com/jquery-3.6.4.js"
+//   integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+//   crossorigin="anonymous"></script> 
+
+
+  <!-- shortcut for jquery is $ or jquery within console -->
+  <script src="./myjquery.js"></script>
+</html>

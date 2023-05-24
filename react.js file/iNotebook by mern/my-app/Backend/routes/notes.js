@@ -1,14 +1,20 @@
 const express =require('express')
+
 const router =express.Router()
+
 const fetchuser =require("../middleware/fetchuser")
+
 const Note =require('../models/Note')
 
 const { body, validationResult } = require('express-validator');
+
+const ObjectID = require('mongodb').ObjectID;
 
 //Route 1 : Get All the Notes using:GET "api/notes/getuser" Login req
 router.get('/fetchallnotes',fetchuser, async(req,res)=>{
    try {
  const notes = await Note.find({user:req.user.id})
+
    res.json(notes)
       
    } catch (error) {
@@ -53,7 +59,7 @@ router.post('/addnote',fetchuser,[
 
 // Route : 3 update an existing Note using :PUT "/api/notes/updatenote" . login req
 router.put('/updatenote/:id',fetchuser, async(req,res)=>{
-
+   
    const { title,description,tag}= req.body;
    
    try {
@@ -65,7 +71,7 @@ router.put('/updatenote/:id',fetchuser, async(req,res)=>{
      
       // find the note to be updated  and ipdated it.
 
-      let note =await Note.findById({id:req.params.id});
+      let note =await Note.findById({_id:ObjectID(req.params.id)});
       if(!note){
         return  res.status(404).send("not found")
       };
@@ -74,11 +80,11 @@ router.put('/updatenote/:id',fetchuser, async(req,res)=>{
       if(note.user.toString() !== req.user.id){
          return res.status(401).send("not allowed")
       }
-    note = await Note.findByIdAndUpdate({id:req.params.id},{$set:newNote},{new:true})
+    note = await Note.findByIdAndUpdate({_id:ObjectID(req.params.id)},{$set:newNote},{new:true})
      res.json({note});
    }
    catch (error) {
-      console.log("error")
+      console.log("error",error)
       res.status(500).send("some error occured")
     }
 
@@ -106,7 +112,7 @@ router.delete('/deletenote/:id',fetchuser, async(req,res)=>{
      res.json({"success":"note has been deleted",note:note});
    }
    catch (error) {
-      console.log("error")
+      console.log("error",error)
       res.status(500).send("some error occured")
     }
 
